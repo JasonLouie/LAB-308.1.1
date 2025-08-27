@@ -19,8 +19,6 @@ const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
 // if ANY of the numbers is larger than 25.
 const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
 
-const isUnder25 = n1 < 25 && n2 < 25 && n3 < 25 && n4 < 25;
-
 // Check four: all unique numbers
 // This is long, and there are more efficient
 // ways of handling it with other data structures
@@ -31,17 +29,24 @@ const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 
 // for convenience. Note how we negate isOver25 using
 // the ! operator. We could also have tested for 
 // "isUnder25" as an alternative.
-const isValid = isSum50 && isTwoOdd && isUnder25 && isUnique;
-console.log(`The four numbers are valid according to the provided criteria: ${isValid}`)
+// const isValid = isSum50 && isTwoOdd && isOver25 && isUnique;
 
-// Part 1
+// Question 1
 const isDivisibleBy5 = !(n1%5) && !(n2%5) && !(n3%5) && !(n4%5);
 console.log(`The four numbers are divisible by 5: ${isDivisibleBy5}`);
 
+// Question 2
 const isFirstLarger = n1 > n4;
 console.log(`The first number is larger than the last: ${isFirstLarger}`);
 
+// Question 3
 const arithmeticChain = ((n2 - n1) * n3) % n4;
 console.log(`The answer to the arithmetic chain is: ${arithmeticChain}`);
 
+// Question 4
+const isUnder25 = n1 < 25 && n2 < 25 && n3 < 25 && n4 < 25;
 console.log(`The four numbers are under 25: ${isUnder25}`);
+
+// Modified isValid
+const isValid = isSum50 && isTwoOdd && isUnder25 && isUnique && isDivisibleBy5 && isFirstLarger; // Replaced isOver25 with isUnder25
+console.log(`The four numbers are valid according to the provided criteria: ${isValid}`)
