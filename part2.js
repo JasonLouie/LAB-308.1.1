@@ -26,3 +26,5 @@ console.log(`The budget is enough to cover the fuel expense: ${isFastestEnough}`
 console.log(`The trip will take ${slowestHours} hours at 55 miles per hour.`);
 console.log(`The trip will take ${moderateHours} hours at 60 miles per hour.`);
 console.log(`The trip will take ${fastestHours} hours at 75 miles per hour.`);
+
+// Traveling at an average of 75 miles per hour is more cost efficient and saves a lot more time. The other options take longer and cost a lot more.
