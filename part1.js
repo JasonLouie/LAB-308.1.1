@@ -49,4 +49,4 @@ console.log(`The four numbers are under 25: ${isUnder25}`);
 
 // Modified isValid
 const isValid = isSum50 && isTwoOdd && isUnder25 && isUnique && isDivisibleBy5 && isFirstLarger; // Replaced isOver25 with isUnder25
-console.log(`The four numbers are valid according to the provided criteria: ${isValid}`)
+console.log(`The four numbers are valid according to the provided criteria: ${isValid}`);
